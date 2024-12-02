@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dy46sxauh-go-gitops
+  description: This is GitOps manifest for dy46sxauh-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dy46sxauh-go
+    backstage.io/kubernetes-id: dy46sxauh-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: dy46sxauh-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dy46sxauh-go
